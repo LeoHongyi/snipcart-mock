@@ -32,7 +32,8 @@ const CartItem = ({ product, isCartPage }) => {
   }
   if (isCartPage) {
     return (
-      <Grid
+      <>
+        {product.qty > 0 &&       <Grid
         h='200px'
         templateRows='repeat(2, 1fr)'
         templateColumns='repeat(5, 1fr)'
@@ -101,7 +102,8 @@ const CartItem = ({ product, isCartPage }) => {
             </Flex>
         </GridItem>
         </GridItem>
-      </Grid>
+      </Grid>}
+      </>
     )
   }
   return (
